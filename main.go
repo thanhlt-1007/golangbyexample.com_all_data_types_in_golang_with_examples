@@ -1,7 +1,21 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "math/bits"
+    "reflect"
+    "unsafe"
+)
 
 func main() {
-    fmt.Println("Hello World")
+    // int
+    sizeOfIntInbits := bits.UintSize
+    fmt.Printf("%d bits\n", sizeOfIntInbits)
+
+    var a int
+    fmt.Printf("%d bytes \n", unsafe.Sizeof(a))
+    fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
+
+    b := 2
+    fmt.Printf("b's type is %s\n", reflect.TypeOf((b)))
 }
