@@ -20,7 +20,12 @@ func main() {
     // fmt.Printf("b's type is %s\n", reflect.TypeOf((b)))
 
     // int8
-    var a int8 = 2
+    // var a int8 = 2
+    // fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
+    // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
+
+    // int16
+    var a int16 = 2
     fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
     fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 }
