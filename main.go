@@ -3,8 +3,8 @@ package main
 import (
     "fmt"
     // "math/bits"
-    "reflect"
-    "unsafe"
+    // "reflect"
+    // "unsafe"
 )
 
 type sample struct {
@@ -90,17 +90,34 @@ func main() {
     // fmt.Printf("Type: %s\n", reflect.TypeOf(r))
 
     // rune (int32)
-    r := 'a'
-    // Print Size
-    fmt.Printf("Size: %d\n", unsafe.Sizeof(r))
-    // Print Type
-    fmt.Printf("Type: %s\n", reflect.TypeOf(r))
-    // Print Unicode Code Point
-    fmt.Printf("Unicode Code Ponit: %U\n", r)
-    // Print Character
-    fmt.Printf("Character: %c\n", r)
+    // r := 'a'
+    // // Print Size
+    // fmt.Printf("Size: %d\n", unsafe.Sizeof(r))
+    // // Print Type
+    // fmt.Printf("Type: %s\n", reflect.TypeOf(r))
+    // // Print Unicode Code Point
+    // fmt.Printf("Unicode Code Ponit: %U\n", r)
+    // // Print Character
+    // fmt.Printf("Character: %c\n", r)
 
-    s := "0b£"
-    fmt.Printf("%U\n", []rune(s))
-    fmt.Println([]rune(s))
+    // s := "0b£"
+    // fmt.Printf("%U\n", []rune(s))
+    // fmt.Println([]rune(s))
+
+    // string
+    x := "this\nthat"
+    fmt.Printf("x is: %s\n", x)
+
+    y := `this\nthat`
+    fmt.Printf("y is: %s\n", y)
+
+    s := "ab£"
+    fmt.Println([]byte(s))
+    fmt.Println(len(s))
+
+    fmt.Println("c" + "d")
+
+    for _, c := range(s) {
+        fmt.Println(string(c))
+    }
 }
