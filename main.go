@@ -55,7 +55,12 @@ func main() {
     // fmt.Println((*(*string)(p)))
 
     // uint8
-    var a uint8
+    // var a uint8
+    // fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
+    // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
+
+    // uint16
+    var a uint16
     fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
     fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 }
