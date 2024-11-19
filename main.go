@@ -105,19 +105,32 @@ func main() {
     // fmt.Println([]rune(s))
 
     // string
-    x := "this\nthat"
-    fmt.Printf("x is: %s\n", x)
+    // x := "this\nthat"
+    // fmt.Printf("x is: %s\n", x)
 
-    y := `this\nthat`
-    fmt.Printf("y is: %s\n", y)
+    // y := `this\nthat`
+    // fmt.Printf("y is: %s\n", y)
 
-    s := "ab£"
-    fmt.Println([]byte(s))
-    fmt.Println(len(s))
+    // s := "ab£"
+    // fmt.Println([]byte(s))
+    // fmt.Println(len(s))
 
-    fmt.Println("c" + "d")
+    // fmt.Println("c" + "d")
 
-    for _, c := range(s) {
-        fmt.Println(string(c))
-    }
+    // for _, c := range(s) {
+    //     fmt.Println(string(c))
+    // }
+
+    // boolean
+    var a bool
+    fmt.Printf("a's value is %t\n", a)
+
+    andOperation := 1 < 2 && 1 > 3
+    fmt.Printf("Output of AND operation on one true and other false: %t\n", andOperation)
+
+    orOperation := 1 < 2 || 1 > 3
+    fmt.Printf("Output of PR operation on one true and other false: %t\n", orOperation)
+
+    negationOperation := !(1 > 2)
+    fmt.Println("Output of NEGATION operation on false value: %t\n", negationOperation)
 }
