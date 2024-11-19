@@ -122,15 +122,23 @@ func main() {
     // }
 
     // boolean
-    var a bool
-    fmt.Printf("a's value is %t\n", a)
+    // var a bool
+    // fmt.Printf("a's value is %t\n", a)
 
-    andOperation := 1 < 2 && 1 > 3
-    fmt.Printf("Output of AND operation on one true and other false: %t\n", andOperation)
+    // andOperation := 1 < 2 && 1 > 3
+    // fmt.Printf("Output of AND operation on one true and other false: %t\n", andOperation)
 
-    orOperation := 1 < 2 || 1 > 3
-    fmt.Printf("Output of PR operation on one true and other false: %t\n", orOperation)
+    // orOperation := 1 < 2 || 1 > 3
+    // fmt.Printf("Output of PR operation on one true and other false: %t\n", orOperation)
 
-    negationOperation := !(1 > 2)
-    fmt.Println("Output of NEGATION operation on false value: %t\n", negationOperation)
+    // negationOperation := !(1 > 2)
+    // fmt.Println("Output of NEGATION operation on false value: %t\n", negationOperation)
+
+    // array
+    sample := [3]string{"a", "b", "c"}
+    print(sample)
+}
+
+func print(sample [3]string) {
+    fmt.Println(sample)
 }
