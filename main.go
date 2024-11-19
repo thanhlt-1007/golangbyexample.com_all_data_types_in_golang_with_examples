@@ -85,7 +85,22 @@ func main() {
     // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 
     // byte (unit8)
-    var r byte = 'a'
+    // var r byte = 'a'
+    // fmt.Printf("Size: %d\n", unsafe.Sizeof(r))
+    // fmt.Printf("Type: %s\n", reflect.TypeOf(r))
+
+    // rune (int32)
+    r := 'a'
+    // Print Size
     fmt.Printf("Size: %d\n", unsafe.Sizeof(r))
+    // Print Type
     fmt.Printf("Type: %s\n", reflect.TypeOf(r))
+    // Print Unicode Code Point
+    fmt.Printf("Unicode Code Ponit: %U\n", r)
+    // Print Character
+    fmt.Printf("Character: %c\n", r)
+
+    s := "0b£"
+    fmt.Printf("%U\n", []rune(s))
+    fmt.Println([]rune(s))
 }
