@@ -3,14 +3,14 @@ package main
 import (
     "fmt"
     // "math/bits"
-    // "reflect"
+    "reflect"
     "unsafe"
 )
 
 type sample struct {
     a int
     b string
-    }
+}
 
 func main() {
     // int
@@ -50,7 +50,12 @@ func main() {
     // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 
     // uintptr
-    s := &sample{a: 1, b: "test"}
-    p := unsafe.Pointer(uintptr(unsafe.Pointer(s)) + unsafe.Offsetof(s.b))
-    fmt.Println((*(*string)(p)))
+    // s := &sample{a: 1, b: "test"}
+    // p := unsafe.Pointer(uintptr(unsafe.Pointer(s)) + unsafe.Offsetof(s.b))
+    // fmt.Println((*(*string)(p)))
+
+    // uint8
+    var a uint8
+    fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
+    fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 }
