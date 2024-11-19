@@ -70,7 +70,12 @@ func main() {
     // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 
     // uint64
-    var a uint64
+    // var a uint64
+    // fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
+    // fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
+
+    // float32
+    var a float32
     fmt.Printf("%d bytes\n", unsafe.Sizeof(a))
     fmt.Printf("a's type is %s\n", reflect.TypeOf(a))
 }
