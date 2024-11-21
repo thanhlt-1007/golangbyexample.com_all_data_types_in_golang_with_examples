@@ -242,11 +242,16 @@ func main() {
     // fmt.Println(*b)
 
     // function
-    add := func(x, y int) int {
-        return x + y
-    }
-    fmt.Println(add(1, 2))
-    fmt.Println(doOperation(add, 1, 2))
+    // add := func(x, y int) int {
+    //     return x + y
+    // }
+    // fmt.Println(add(1, 2))
+    // fmt.Println(doOperation(add, 1, 2))
+
+    // interface
+    var shp shape
+    shp = square{side: 4}
+    fmt.Println(shp.area())
 }
 
 func print(sample [3]string) {
@@ -268,4 +273,16 @@ type employee struct {
     name string
     age int
     salary float64
+}
+
+type square struct {
+    side int
+}
+
+func (s square) area() int {
+    return s.side * s.side
+}
+
+type shape interface {
+    area() int
 }
