@@ -161,25 +161,53 @@ func main() {
 
     // slices
     // Declare a slice using make
-    s := make([]string, 2, 3)
-    fmt.Println(s)
+    // s := make([]string, 2, 3)
+    // fmt.Println(s)
 
-    // Direct initialization
-    p := []string{"a", "b", "c"}
-    fmt.Println(p)
+    // // Direct initialization
+    // p := []string{"a", "b", "c"}
+    // fmt.Println(p)
 
-    // Append function
-    p = append(p, "d")
-    fmt.Println(p)
+    // // Append function
+    // p = append(p, "d")
+    // fmt.Println(p)
 
-    // Iterate over a slice
-    for _, val := range p {
-        fmt.Println(val)
-    }
+    // // Iterate over a slice
+    // for _, val := range p {
+    //     fmt.Println(val)
+    // }
+
+    // channels
+    // buffered channel example
+    // Creating a buffered channel of length 3
+    // eventsChan := make(chan string, 3)
+    // eventsChan <- "a"
+    // eventsChan <- "b"
+    // eventsChan <- "c"
+
+    // // Closing the channel
+    // close(eventsChan)
+    // for event := range eventsChan {
+    //     fmt.Println(event)
+    // }
+
+    // unbuffered channel example
+    // eventsChan := make(chan string)
+    // go sendEvents(eventsChan)
+    // for event := range(eventsChan) {
+    //     fmt.Println(event)
+    // }
 }
 
 func print(sample [3]string) {
     fmt.Println(sample)
+}
+
+func sendEvents(eventsChan chan<- string) {
+    eventsChan <- "a"
+    eventsChan <- "b"
+    eventsChan <- "c"
+    close(eventsChan)
 }
 
 type employee struct {
