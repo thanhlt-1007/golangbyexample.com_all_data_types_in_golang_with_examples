@@ -230,16 +230,23 @@ func main() {
 
     // pointer
     // Declare
-    var b *int
-    a := 2
-    b = &a
-    fmt.Println(b)
-    fmt.Println(*b)
+    // var b *int
+    // a := 2
+    // b = &a
+    // fmt.Println(b)
+    // fmt.Println(*b)
 
-    b = new(int)
-    *b = 10
-    fmt.Println(b)
-    fmt.Println(*b)
+    // b = new(int)
+    // *b = 10
+    // fmt.Println(b)
+    // fmt.Println(*b)
+
+    // function
+    add := func(x, y int) int {
+        return x + y
+    }
+    fmt.Println(add(1, 2))
+    fmt.Println(doOperation(add, 1, 2))
 }
 
 func print(sample [3]string) {
@@ -251,6 +258,10 @@ func sendEvents(eventsChan chan<- string) {
     eventsChan <- "b"
     eventsChan <- "c"
     close(eventsChan)
+}
+
+func doOperation(fn func(int, int) int, x, y int) int {
+    return fn(x, y)
 }
 
 type employee struct {
