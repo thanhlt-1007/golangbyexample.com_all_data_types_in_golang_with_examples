@@ -200,33 +200,46 @@ func main() {
 
     // map
     // Declare
-    var employeeSalary map[string]int
-    fmt.Println(employeeSalary)
+    // var employeeSalary map[string]int
+    // fmt.Println(employeeSalary)
 
-    // Initialize using make
-    employeeSalary2 := make(map[string]int)
-    fmt.Println(employeeSalary2)
+    // // Initialize using make
+    // employeeSalary2 := make(map[string]int)
+    // fmt.Println(employeeSalary2)
 
-    // Initialize using map lieteral
-    employeeSalary3 := map[string]int{
-        "John": 1000,
-        "Sam": 1200,
-    }
-    fmt.Println(employeeSalary3)
+    // // Initialize using map lieteral
+    // employeeSalary3 := map[string]int{
+    //     "John": 1000,
+    //     "Sam": 1200,
+    // }
+    // fmt.Println(employeeSalary3)
 
-    // Operations
-    // Add
-    employeeSalary3["Carl"] = 1500
+    // // Operations
+    // // Add
+    // employeeSalary3["Carl"] = 1500
 
-    // Get
-    fmt.Printf("John salary is %d\n", employeeSalary3["John"])
+    // // Get
+    // fmt.Printf("John salary is %d\n", employeeSalary3["John"])
 
-    // Delete
-    delete(employeeSalary3, "Carl")
+    // // Delete
+    // delete(employeeSalary3, "Carl")
 
-    // Print map
-    fmt.Println("\nPrinting employeeSalary3 map")
-    fmt.Println(employeeSalary3)
+    // // Print map
+    // fmt.Println("\nPrinting employeeSalary3 map")
+    // fmt.Println(employeeSalary3)
+
+    // pointer
+    // Declare
+    var b *int
+    a := 2
+    b = &a
+    fmt.Println(b)
+    fmt.Println(*b)
+
+    b = new(int)
+    *b = 10
+    fmt.Println(b)
+    fmt.Println(*b)
 }
 
 func print(sample [3]string) {
